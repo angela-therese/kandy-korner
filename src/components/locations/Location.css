@@ -1,0 +1,22 @@
+.locations {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.location {
+    background-color: lightcoral;
+    padding: 1em;
+    border-radius: .5em;
+}
+
+.location__heading {
+    text-align: center;
+}
+
+.location__cards {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

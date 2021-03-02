@@ -1,0 +1,26 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.product {
+    background-color: lightcoral;
+    flex-basis: 18%;
+    padding: 1em;
+    margin: 1em;
+    border-radius: .5em;
+}
+
+.product__heading {
+    text-align: center;
+}
+
+.product__cards {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
