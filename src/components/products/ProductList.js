@@ -1,12 +1,14 @@
 import React, { useContext, useEffect } from "react"
 import { ProductContext } from "./ProductProvider"
 import { ProductCard } from "./Product"
+import { ProductTypeContext } from "../ProductTypeProvider"
 import "./Product.css"
 
 export const ProductList = () => {
   // This state changes when `getlocations()` is invoked below
 
   const { products, getProducts } = useContext(ProductContext)
+//   const { productTypes, getProductTypes } = useContext(ProductTypeContext)
   
  
 
@@ -15,7 +17,7 @@ export const ProductList = () => {
   useEffect(() => {
     console.log("ProductList: useEffect - getproducts")
     getProducts()
-
+    
   }, [])
   console.log(products)
 
@@ -28,7 +30,11 @@ export const ProductList = () => {
      <section className="product__cards">
       {
         products.map(product => {
-          return <ProductCard key={product.id} product={product} />
+            // const productType = productTypes.find(p => p.id === product.productTypeId)
+
+          return <ProductCard key={product.id} product={product} 
+                                    // productType={productType}
+          />
         })
       }
       </section>
